@@ -1,0 +1,12 @@
+  <div class="fields">
+      <!-- x icon to remove -->
+      <%= f.input :username %>
+		  <%= f.input :password %>
+		  <%= f.input :password_confirmation %>
+		  <% if logged_in?&&current_user.role?(:admin) %>
+		  	<%= f.input :role, :collection => User::ROLES %>
+		  <% end %>
+		  <%= f.input :instructor_id, :as => :hidden, :input_html => { :value => @instructor.id} %>  
+<!--       <%= f.link_to_remove("x") %>
+ -->      <!-- fields -->
+  </div>

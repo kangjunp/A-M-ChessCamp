@@ -1,0 +1,21 @@
+<h3>Camp Registrations</h3>
+
+<table class="table">
+  <tr>
+    <th width="200">Name</th>
+    <th width="100">Number of Students Registered</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @camps.each do |camp| %>
+  <tr>
+    <td><%= link_to camp.name, camp_path(camp) %></td>
+    <td align="center"><%= camp.registrations.count %></td>
+  </tr>
+<% end %>
+</table>
+<!-- Add the pagination using will_paginate gem -->
+<span class="paginate">
+<%= will_paginate @camps, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

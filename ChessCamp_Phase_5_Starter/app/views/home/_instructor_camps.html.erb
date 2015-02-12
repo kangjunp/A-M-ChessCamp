@@ -1,0 +1,21 @@
+<h3>Instructor Assignment Counts</h3>
+
+<table class="table">
+  <tr>
+    <th width="200">Name</th>
+    <th width="100">Number of Assigned Camps</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instructor_camps.each do |instructor| %>
+  <tr>
+    <td><%= link_to instructor.name, instructor_path(instructor) %></td>
+    <td align="center"><%= instructor.camps.size %></td>
+  </tr>
+<% end %>
+</table>
+<!-- Add the pagination using will_paginate gem -->
+<span class="paginate">
+<%= will_paginate @instructor_camps, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

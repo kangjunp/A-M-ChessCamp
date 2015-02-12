@@ -1,0 +1,20 @@
+<%= simple_form_for @registration, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend>Register a student for this camp</legend>
+		
+		<%= f.input :camp_id, :collection => Camp.active.alphabetical, include_blank: true, input_html: {class: "avg"} %>
+
+		<%= f.input :student_id, :collection => Student.active.alphabetical, input_html: {class: "avg"} %>
+
+    <%= f.input :payment_status, collection: [['Deposit', 'deposit'],['paid','full']], prompt: "Select payment status..." %>
+
+    <%= f.input :points_earned %>
+
+    <div class="form-actions">
+      <%= f.submit nil, class: 'button radius' %>
+      <%= link_to 'Cancel', camps_path, :class => 'button secondary radius' %>
+    </div>
+
+  </fieldset>
+<% end %>
+

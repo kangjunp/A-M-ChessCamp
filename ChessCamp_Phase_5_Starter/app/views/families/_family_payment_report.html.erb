@@ -1,0 +1,33 @@
+<h5>Family Payment Report</h5>
+<% if @students.empty? %>
+  <p>&nbsp;&nbsp;<em>None at this time</em></p>
+  <p>&nbsp;</p>
+  
+<% else %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Child Name</th>
+        <th>Payments Received</th>
+  			<th>Payment Due</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |this_student| %>
+        <tr>
+          <td><%= link_to this_student.name, student_path(this_student) %></td>
+          <% if this_student.registration.payment_status == "full"%>
+            <td class="centered"><%= "$ #{@camp.cost}"  %></td>
+          <%elsif this_student.registration.payment_status == "deposit" %>
+            <td class="centered"><%= "$ 50"  %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br />
+
+
+
+
+<% end %>

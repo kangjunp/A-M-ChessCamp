@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="span12">	
+		<h1><%= "Welcome #{current_user.instructor.first_name}, the Adminstrator!" %> </h1>
+	</div>
+	
+  <div class="small-7 columns">
+		<%= render :partial => "instructor_camps" %>
+	</div>
+
+	<div style="border-left: 1px solid black;">
+  <div class="small-4 columns">
+  	<div style="border-lef: 1px solid black;">
+		<%= render :partial => "registration_counts" %>
+	</div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+
+<div class="row">
+	<div class ="span12">
+		<h3> Quick Links to Create: &nbsp;&nbsp;
+		<%= link_to 'Camp', new_camp_path, class: "button tiny radius" %>&nbsp;&nbsp;
+		<%= link_to 'Family', new_family_path, class: "button tiny radius "%>&nbsp;&nbsp;
+		<%= link_to 'Student', new_student_path, class: "button tiny radius" %>&nbsp;&nbsp;
+		<%= link_to 'Curriculum', new_curriculum_path, class: "button tiny radius" %>&nbsp;&nbsp;
+		<%= link_to 'Instructor', new_instructor_path, class: "button tiny radius" %>&nbsp;&nbsp;
+		<%= link_to 'Location', new_location_path, class: "button tiny radius" %>
+		</h3>
+	</div>
+</div>
+
+
+<br>
+<br>

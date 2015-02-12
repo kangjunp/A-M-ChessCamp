@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A&amp;M Chess Camps</title>
+    <link href="/assets/application.css" media="screen" rel="stylesheet" />
+    <script src="/assets/vendor/modernizr.js"></script>
+    
+  </head>
+
+  <body>
+      <div class="contain-to-grid">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <a href="/home"><img alt="Amcc logo" src="/assets/amcc_logo.png" /></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <!-- options for curriculums -->
+          <li class="has-dropdown">
+            <a href="/curriculums">Curriculums</a>
+            <ul class="dropdown">
+              <li><a href="/curriculums">List Curriculums</a></li>
+              <li><a href="/curriculums/new">Add a Curriculum</a></li>
+            </ul>
+          </li>
+
+          <!-- options for camps -->
+          <li class="has-dropdown">
+            <a href="/camps">Camps</a>
+            <ul class="dropdown">
+              <li><a href="/camps">List Camps</a></li>
+              <li><a href="/camps/new">Add a Camp</a></li>
+            </ul>
+          </li>
+
+          <!-- options for instructors -->
+          <li class="has-dropdown">
+            <!-- <a href="#">Instructors</a> -->
+            <a href="/instructors">Instructors</a>
+            <ul class="dropdown">
+              <li><a href="/instructors">List Instructors</a></li>
+              <li><a href="/instructors/new">Add an Instructor</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </section>
+    </nav>
+  </div>
+    
+    <div class="row">
+      <div class="small-12 columns" id="main_content">
+        
+        <div class="row">
+  <div class="small-8 columns">
+    <form accept-charset="UTF-8" action="/instructors/11" class="simple_form form-horizontal" id="edit_instructor_11" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="patch" /></div>
+    <div class="row">
+      <div class="span7">
+        <fieldset>
+          <legend>Edit Instructor</legend>
+          <div class="input string required instructor_first_name"><label class="string required control-label" for="instructor_first_name"><abbr title="required">*</abbr> First name</label><input class="string required" id="instructor_first_name" name="instructor[first_name]" type="text" value="Stafford" /></div>
+          <div class="input string required instructor_last_name"><label class="string required control-label" for="instructor_last_name"><abbr title="required">*</abbr> Last name</label><input class="string required" id="instructor_last_name" name="instructor[last_name]" type="text" value="Brunk" /></div>
+          <div class="input string required instructor_phone"><label class="string required control-label" for="instructor_phone"><abbr title="required">*</abbr> Phone</label><input class="string required" id="instructor_phone" name="instructor[phone]" type="text" value="839-655-3897" /></div>
+          <div class="input email optional instructor_email"><label class="email optional control-label" for="instructor_email">Email</label><input class="string email optional" id="instructor_email" name="instructor[email]" type="email" value="stafford.brunk@example.com" /></div>
+          <div class="input boolean optional instructor_active"><input name="instructor[active]" type="hidden" value="0" /><label class="boolean optional control-label checkbox" for="instructor_active"><input checked="checked" class="boolean optional" id="instructor_active" name="instructor[active]" type="checkbox" value="1" />Active</label></div>
+          <div class="input text optional instructor_bio"><label class="text optional control-label" for="instructor_bio">Bio</label><textarea class="text optional" id="instructor_bio" name="instructor[bio]" rows="6">
+A stupendous chess player as you have ever seen.</textarea></div>
+        </fieldset>
+      </div>
+
+    <div class="span5">
+    <legend>Edit User</legend>
+      <div>
+                <p>
+          <br />
+          <a class="btn btn-mini btn-primary add_nested_fields" data-association="user" data-blueprint-id="user_fields_blueprint" href="javascript:void(0)"><i class='icon-plus icon-white'></i> Add Login User</a>
+        </p>
+      </div> 
+    </div>
+  </div>
+
+    <div class="form-actions">
+      <input class="button radius" name="commit" type="submit" value="Update Instructor" />
+      <a class="button secondary radius" href="/instructors">Back to list of instructors</a>
+    </div>
+
+<div data-blueprint="&lt;div class=&quot;fields&quot;&gt;
+            &lt;div class=&quot;fields&quot;&gt;
+      &lt;!-- x icon to remove --&gt;
+      &lt;div class=&quot;input string required instructor_user_username&quot;&gt;&lt;label class=&quot;string required control-label&quot; for=&quot;instructor_user_attributes_username&quot;&gt;&lt;abbr title=&quot;required&quot;&gt;*&lt;/abbr&gt; Username&lt;/label&gt;&lt;input class=&quot;string required&quot; id=&quot;instructor_user_attributes_username&quot; name=&quot;instructor[user_attributes][username]&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
+		  &lt;div class=&quot;input password required instructor_user_password&quot;&gt;&lt;label class=&quot;password required control-label&quot; for=&quot;instructor_user_attributes_password&quot;&gt;&lt;abbr title=&quot;required&quot;&gt;*&lt;/abbr&gt; Password&lt;/label&gt;&lt;input class=&quot;password required&quot; id=&quot;instructor_user_attributes_password&quot; name=&quot;instructor[user_attributes][password]&quot; type=&quot;password&quot; /&gt;&lt;/div&gt;
+		  &lt;div class=&quot;input password required instructor_user_password_confirmation&quot;&gt;&lt;label class=&quot;password required control-label&quot; for=&quot;instructor_user_attributes_password_confirmation&quot;&gt;&lt;abbr title=&quot;required&quot;&gt;*&lt;/abbr&gt; Password confirmation&lt;/label&gt;&lt;input class=&quot;password required&quot; id=&quot;instructor_user_attributes_password_confirmation&quot; name=&quot;instructor[user_attributes][password_confirmation]&quot; type=&quot;password&quot; /&gt;&lt;/div&gt;
+		  &lt;div class=&quot;input hidden instructor_user_instructor_id&quot;&gt;&lt;input class=&quot;hidden&quot; id=&quot;instructor_user_attributes_instructor_id&quot; name=&quot;instructor[user_attributes][instructor_id]&quot; type=&quot;hidden&quot; value=&quot;11&quot; /&gt;&lt;/div&gt;  
+&lt;!--       &lt;input id=&quot;instructor_user_attributes__destroy&quot; name=&quot;instructor[user_attributes][_destroy]&quot; type=&quot;hidden&quot; value=&quot;false&quot; /&gt;&lt;a class=&quot;remove_nested_fields&quot; href=&quot;javascript:void(0)&quot;&gt;x&lt;/a&gt;
+ --&gt;      &lt;!-- fields --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;" id="user_fields_blueprint" style="display: none"></div></form>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="small-12 columns" id="footer">
+          <p class="supertiny">&nbsp;</p>
+
+  <a href="/home">Home</a>&nbsp;&nbsp;::&nbsp;&nbsp;
+  <a href="/home/about">About Us</a>&nbsp;&nbsp;::&nbsp;&nbsp;
+  <a href="/home/contact">Contact Us</a>&nbsp;&nbsp;::&nbsp;&nbsp;
+  <a href="/home/privacy">Privacy Policy</a>
+  <br /><br />
+  <div id="copy">
+    Webmaster: <a encode="javascript" href="mailto:profh@cmu.edu">Prof. H</a> 
+    &nbsp;&nbsp;&copy 2014
+  </div>
+
+        </div>
+      </div> 
+    </footer> 
+    <script src="/assets/application.js"></script>
+  </body>
+</html>

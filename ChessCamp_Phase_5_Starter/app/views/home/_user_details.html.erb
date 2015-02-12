@@ -1,0 +1,10 @@
+<p>
+  <b>Username:</b> <%= @instructor.user.username %>
+</p>
+
+<p>
+  <b>Role:</b> <%= @instructor.user.role %>
+</p>
+
+
+<%= link_to 'Reset Password', edit_user_path(@instructor.user), class: "button tiny radius" %>&nbsp;&nbsp;

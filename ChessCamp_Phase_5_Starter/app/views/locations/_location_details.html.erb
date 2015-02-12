@@ -1,0 +1,31 @@
+<h3>Location Details</h3><br />
+
+<div style="border-top: 1px solid black;"></div>
+<br />
+
+<strong>Name:&nbsp;&nbsp;</strong> 
+  <%= @location.name %><br /><br />
+
+<strong>Street:&nbsp;&nbsp;</strong>
+  <%= "#{@location.street_1} #{@location.street_2}" %><br /><br />
+
+<strong>Address:&nbsp;&nbsp;</strong> 
+  <%= "#{@location.city}, #{@location.state} #{@location.zip}" %><br /><br />
+
+<strong>Maximum Capacity:&nbsp;&nbsp;</strong> 
+  <%= @location.max_capacity %><br /><br />
+
+
+<strong>Active?&nbsp;&nbsp;</strong>
+  <%= @location.active ? "Yes" : "No" %><br /><br />
+
+
+ <div style="border-top: 1px solid black;"></div>
+<br />
+<br /><strong>Map&nbsp;&nbsp;</strong><br /><br />
+		
+
+<%= image_tag @location.create_map_link %><br /><br />
+
+<%= link_to "Edit this location", edit_location_path(@location), class: "button tiny radius" %>&nbsp;&nbsp;
+<%= link_to 'Destroy location', location_path(@location), data: { confirm: 'Are you sure you want to permanently remove this location from the system?' }, method: :delete, class: "button tiny radius alert" %>

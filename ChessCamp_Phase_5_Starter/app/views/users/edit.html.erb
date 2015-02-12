@@ -1,0 +1,11 @@
+<%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= "Reset Password for #{@user.username}" %></legend>
+		  <%= f.input :password %>
+		  <%= f.input :password_confirmation %>
+    <div class="form-actions">
+      <%= f.submit 'Reset Password', :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', instructor_path(@user.instructor), :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
